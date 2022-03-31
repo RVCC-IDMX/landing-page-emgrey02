@@ -1,5 +1,19 @@
 @use './base/reset';
 @use "./base/typography";
+@use "./abstracts/variables" as var;
 @use "./pages/landing-page";
 @use "./components/nav";
 @use "./components/hero";
+
+html {
+    background: var.$bkgd-color;
+}
+body {
+    height: 100vh;
+    background-image: url('../images/hero-image.svg');
+    background-repeat: no-repeat;
+    background-position-x: -150px;
+    background-position-y: center;
+    background-size: 200%;
+    color: var.$font-color;
+}
