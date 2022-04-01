@@ -1,2 +1,78 @@
 /* _nav.scss */
 @use "../abstracts/variables" as *;
+
+.nav {
+
+    &__logo {
+        a {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: .3rem 0rem;
+
+            svg {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+    }
+
+    &__toggle {
+        position: absolute;
+        cursor: pointer;
+        margin: .5rem 2.5rem;
+        right: 0;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    .close {
+        display: none;
+    }
+
+    .menu {
+        margin-top: 0.2rem;
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        margin: 1rem;
+
+        li {
+            display: none;
+            font-size: $font-sm;
+
+            &:first-child {
+                margin-inline-end: auto;
+                display: block;
+                font-size: $font-static-md;
+            }
+        }
+    }
+
+
+    &__checkbox:checked {
+
+        ~ .nav__toggle > .menu {
+            display: none;
+        }
+        
+        ~ .nav__toggle > .close {
+            display: block;
+        }
+
+        ~ .nav__menu li {
+            display: block;
+        }
+    }
+}

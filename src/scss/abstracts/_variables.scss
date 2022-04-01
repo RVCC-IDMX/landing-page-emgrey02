@@ -5,4 +5,10 @@ $bkgd-color: linear-gradient(0deg, #E00899 0%, #AA43E6 100%);
 $font-color: #ffffff;
 $button-color: #2b2f47;
 
+/* font sizes */
+$font-sm: clamp(18px, 3vw, 20px);
+$font-md: clamp(24px, 5vw, 32px);
+$font-lg: clamp(32px, 5vw, 60px);
+$font-static-md: 24px;
+
 
