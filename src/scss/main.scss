@@ -5,10 +5,10 @@
 @use "./components/nav";
 @use "./components/hero";
 
-html {
-    background: var.$bkgd-color;
-}
+
 body {
-    height: 100vh;
+    background: var.$bkgd-color;
     color: var.$font-color;
+    overflow-x: hidden;
+    height: min-content;
 }
