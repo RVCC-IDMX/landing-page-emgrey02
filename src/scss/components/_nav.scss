@@ -35,6 +35,10 @@
 
     .menu {
         margin-top: 0.2rem;
+
+        @media (min-width: 800px) {
+            display: none;
+        }
     }
 
     &__checkbox {
@@ -56,9 +60,43 @@
                 margin-inline-end: auto;
                 display: block;
                 font-size: $font-static-md;
+                font-family: "Oswald";
+
+                @media (min-width: 800px) {
+                    margin: 0;
+                }
+            }
+
+            
+            @media (min-width: 800px) {
+                display: block;
+
+                &:nth-child(2) {
+                    margin-inline-start: 1.5rem;
+                }
+
+            }
+
+            @media (min-width: 1300px) {
+                &:nth-child(2) {
+                    margin-inline-start: 20rem;
+                }
+                &:last-child {
+                    margin-inline-end: 10rem;
+                }
+
+                &:first-child {
+                    margin-inline-start: 5rem;
+                }
             }
         }
+
+        @media (min-width: 800px) {
+            flex-direction: row;
+            justify-content: space-around;
+        }
     }
+        
 
 
     &__checkbox:checked {
