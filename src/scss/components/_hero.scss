@@ -83,5 +83,13 @@
         border-radius: 5rem;
         border: none;
         padding: .7rem 2rem;
+        outline: 2px solid rgba(255, 255, 255,0);
+        transition: background-color ease 300ms, outline-color ease 300ms;
+
+        &:hover,
+        &:focus {
+            background-color: black;
+            outline-color: rgba(255, 255, 255,1);
+        }
     }
 }
