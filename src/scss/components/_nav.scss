@@ -51,10 +51,12 @@
         gap: 2rem;
         align-items: center;
         margin: 1rem;
+        height: 5rem;
+        transition: height linear 300ms;
 
         li {
-            display: none;
             font-size: $font-sm;
+            display: block;
 
             &:first-child {
                 margin-inline-end: auto;
@@ -65,6 +67,11 @@
                 @media (min-width: 800px) {
                     margin: 0;
                 }
+            }
+
+            &:not(:first-child){
+                transform: scaleY(0);
+                
             }
 
             &:last-child {
@@ -119,9 +126,15 @@
 
         ~ .nav__menu {
             border-block-end: 1px solid white;
+            height: fit-content;
             
             li {
                 display: block;
+
+                &:not(:first-child) {
+                    transform: scaleY(100%);
+                    transition: transform ease 300ms;
+                }
             }
         }
     }
