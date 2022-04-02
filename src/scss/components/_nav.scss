@@ -67,6 +67,10 @@
                 }
             }
 
+            &:last-child {
+                margin-block-end: 2rem;
+            }
+
             
             @media (min-width: 800px) {
                 display: block;
@@ -75,12 +79,17 @@
                     margin-inline-start: 1.5rem;
                 }
 
+                &:last-child {
+                    margin-block-end: 0;
+                }
+
             }
 
             @media (min-width: 1300px) {
                 &:nth-child(2) {
                     margin-inline-start: 20rem;
                 }
+
                 &:last-child {
                     margin-inline-end: 10rem;
                 }
@@ -98,7 +107,6 @@
     }
         
 
-
     &__checkbox:checked {
 
         ~ .nav__toggle > .menu {
@@ -109,8 +117,12 @@
             display: block;
         }
 
-        ~ .nav__menu li {
-            display: block;
+        ~ .nav__menu {
+            border-block-end: 1px solid white;
+            
+            li {
+                display: block;
+            }
         }
     }
 }

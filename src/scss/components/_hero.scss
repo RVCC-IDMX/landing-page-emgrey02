@@ -6,7 +6,7 @@
 .hero {
     display: grid;
     grid-template-rows: min-content auto;
-    height: 100vh;
+    min-height: 100vh;
 
     @media (min-width: 800px) {
         grid-template-rows: min-content auto;
@@ -38,6 +38,7 @@
     }
 
     &__image {
+        padding-block-end: 5rem;
         background-position-x: -150px;
         background-position-y: top;
         background-size: 200%;
@@ -58,19 +59,16 @@
 }
 
 .cta {
-    justify-self: center;
-    inset-inline: 0;
-    inset-block-end: 0;
-    margin-block-start: 2rem;
-    position: absolute;
-    inset-block-end: -5rem;
     width: max-content;
+    position: relative;
     inset-inline-start: 50%;
+    inset-block-start: 2rem;
     transform: translateX(-50%);
     
     @media (min-width: 600px) {
+        position: absolute;
         justify-self: flex-start;
-        top: 0;
+        inset-block-start: 0;
         inset-inline-start: 0;
         transform: none;
         margin-inline: clamp(max(1rem, 8%), 5vw, 100px);
@@ -78,6 +76,7 @@
 
     &__btn {
         color: inherit;
+        cursor: pointer;
         background-color: $button-color;
         font-size: $font-static-md;
         text-transform: uppercase;

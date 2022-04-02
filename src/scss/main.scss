@@ -1,14 +1,10 @@
 @use './base/reset';
-@use "./base/typography";
 @use "./abstracts/variables" as var;
 @use "./pages/landing-page";
-@use "./components/nav";
-@use "./components/hero";
 
 
 body {
     background: var.$bkgd-color;
     color: var.$font-color;
     overflow-x: hidden;
-    height: min-content;
 }

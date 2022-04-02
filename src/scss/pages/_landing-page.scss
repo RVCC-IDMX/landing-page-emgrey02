@@ -1,1 +1,8 @@
 @use "../abstracts/variables" as *;
+@use '../base/typography';
+@use '../components/nav';
+@use '../components/hero';
+
+main {
+    height: max-content;
+}
