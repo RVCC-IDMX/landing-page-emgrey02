@@ -72,6 +72,9 @@
             &:not(:first-child){
                 transform: scaleY(0);
                 
+                @media (min-width: 800px) {
+                    transform: none;
+                }
             }
 
             &:last-child {
